@@ -34,6 +34,8 @@ npm start
 3.Open in browser:
 http://localhost:3000
 
+##Live Demo
+https://pace-inspection-ui.vercel.app/
 
 ## Notes
 The UI is fully driven by the inspection payload structure, allowing new inspection types or additional lines to be supported without requiring changes to the frontend code.
