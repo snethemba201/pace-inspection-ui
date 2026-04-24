@@ -1,7 +1,6 @@
+/* eslint-disable no-new-func */
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const PACE_BLUE = "#1B365D";
 const PACE_ORANGE = "#F37A1F";
 const CHAT_BG = "#0b141a";
 const BTN_BG = "#2a3942";
@@ -91,17 +90,6 @@ export default function DynamicForm({ data }) {
     if (!line.conditional_expression) return true;
     return evaluateExpression(line.conditional_expression, lines, answers);
   };
-
- const showPic = (line) => {
-  if (["Required", "Optional"].includes(line.pic_requirement)) return true;
-
-  if (line.pic_requirement === "Conditional") {
-    return evalCondReq(line.pic_requirement_condition, line.id, lines, answers);
-  }
-
-  return false;
-};
-
   const showNote = (line) => {
     if (["Required", "Optional"].includes(line.note_requirement)) return true;
     if (line.note_requirement === "Conditional") {
